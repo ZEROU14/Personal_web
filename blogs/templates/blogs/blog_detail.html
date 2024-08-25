@@ -1,0 +1,90 @@
+{% extends "_base.html" %}
+{% load static %}
+{% block page_title %} {{blogs.title}} Detail {% endblock  %}
+
+
+{% block content %}
+<div class="content-area single-page-area" data-animation="animated-section-rotateRoomBottomIn">
+    <div class="single-page-content">
+      <div class="content-wrapper">
+        <article class="post">
+
+            <header class="entry-header">
+              {% comment %} <div class="entry-meta entry-meta-top">
+                <span><a href="#" rel="category tag">{{page}}</a></span>      
+              </div><!-- .entry-meta --> {% endcomment %}
+
+              <h2 class="entry-title">{{blogs.title}}</h2>
+            </header><!-- .entry-header -->
+
+            <div class="post-thumbnail">
+              <img src=" {{blogs.cover.url}} " alt="image"/>
+            </div>
+
+            <div class="post-content">
+              <div class="entry-content">
+
+                <div class="row">
+                  <div class=" col-xs-12 col-sm-12 ">
+                    <p>{{blogs.description}}</p>
+                      <p></p>
+                      
+                      <p></p>
+
+                  </div>
+                </div>
+
+              </div><!-- .entry-content -->
+
+              <div class="entry-meta entry-meta-bottom">
+                <div class="date-author">
+                  
+                  <span class="entry-date">
+                    <a href="#" rel="bookmark">
+                      <i class="far fa-clock"></i>
+                      <time class="entry-date" datetime="2020-04-04T08:29:37+00:00">{{blogs.datetime_created }}</time>
+                      <p></p>
+                    </a>
+                  </span>
+
+                  <span class="author vcard">
+                    <a class="url fn n" href="#" rel="author">
+                      <i class="fas fa-user"></i>
+                      <span> Leven</span>
+                    </a>
+                  </span>
+                </div>
+
+                <!-- Share Buttons -->
+                <div class="entry-share btn-group share-buttons">
+                  <a href="https://www.facebook.com/sharer/sharer.php?u=http://example.com/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" class="btn" target="_blank" title="Share on Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+
+                  <a href="https://twitter.com/share?url=http://example.com/" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;" class="btn" target="_blank" title="Share on Twitter">
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                  
+                  <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=http://example.com/" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="btn" title="Share on LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                  
+                  <a href="http://www.digg.com/submit?url=http://example.com/" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;" class="btn" title="Share on Digg">
+                    <i class="fab fa-digg"></i>
+                  </a>
+                </div>
+                <!-- /Share Buttons -->
+              </div>
+
+              <div class="post-tags">
+                <span class="tags">
+                  <a href="#" rel="tag">design</a>
+                  <a href="#" rel="tag">plugin</a>
+                  <a href="#" rel="tag">WordPress</a>
+                </span>
+              </div>
+            </div>
+          </article>
+      </div>
+    </div>
+{% endblock  %}

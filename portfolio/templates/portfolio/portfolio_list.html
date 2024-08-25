@@ -1,0 +1,49 @@
+{% extends "_base.html" %}
+
+{% block page_title %} Portfolio list {% endblock  %}
+
+
+
+{% block content %}
+
+<div class="content-area single-page-area" data-animation="animated-section-rotateRoomBottomIn">
+   
+    <div class="single-page-content">
+      <div class="content-wrapper">
+        <div class="page-title">
+          <h1>Portfolio</h1>
+        </div>
+
+        <article class="page type-page">
+          <div class="entry-content">
+
+            <div class="row">
+              <div class=" col-xs-12 col-sm-12 ">
+                <!-- Portfolio Content -->
+                <div id="portfolio_content_q" class="portfolio-content">
+
+          
+  
+                  <!-- Portfolio Grid -->
+                  <div class="portfolio-grid three-columns shuffle">
+                    {% for foo in port  %}
+                    <!-- Portfolio Item 1 -->
+                    <figure class="item standard" data-groups='["category_all", "category_detailed"]'>
+                      <a href="{{foo.url}}" >
+                        <div class="portfolio-item-img">
+                          <img src="{{foo.cover.url}}" alt="Full Project 2" title="" />
+                        </div>
+
+                        <div class="project-desc">
+                          <div class="project-desc-text">
+                            <div class = 'post-info'>
+                         
+                            </div>
+                            <span class="category">Click to see the code in GitHub</span>
+                          </div>
+                        </div>
+                        <h4 class="">{{foo.title}}</h4>
+                      </a>
+                    </figure>
+                    {% endfor %}
+{% endblock  %}

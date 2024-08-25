@@ -1,0 +1,101 @@
+{% extends "_base.html" %}
+
+{% block page_title %}Blog List{% endblock  %}
+
+
+{% block content %}
+<div class="lm-animated-bg"></div>
+    
+
+    <!-- /Site Header -->
+
+    <!-- Right Sidebar -->
+ 
+    <!-- /Right Sidebar -->
+
+    <!-- Page Content -->
+    <div class="content-area single-page-area" data-animation="animated-section-rotateRoomBottomIn">
+      <div class="single-page-content">
+        <div class="content-wrapper">
+          <div class="page-title">
+            <h1>Blog</h1>
+          </div>
+
+          <article class="page type-page">
+            <div class="entry-content">
+
+              <div class="row">
+                <div class=" col-xs-12 col-sm-12 ">
+
+                  <div class="blog-masonry two-columns clearfix">
+                    <!-- Blog Post 1 -->
+                    {% for foo in blogs %}
+                    <div class="item">
+                       
+                      <div class="blog-card">
+                        
+                        <div class="media-block">
+                          <div class="category">
+                            <a href="#" title="ssss"></a>
+                          </div>
+                          <a href="{{foo.get_absolute_url}}">
+                            {% if foo.cover %}
+                            <img src="{{foo.cover.url}}" alt="" title="" />
+                            {% endif %}
+                            <div class="mask"></div>
+                          </a>
+                        </div>
+                        <div class="post-info">
+                        
+                          <div class="post-date">{{foo.datetime_created}}</div>
+                          {% comment %} <time datetime="{{foo.datetime_created}}">{{foo.datetime_created}}</time> {% endcomment %}
+                          <a href="{{foo.get_absolute_url}}">
+                            <h4 class="blog-item-title">{{foo.title}}</h4>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    {% endfor %}
+                    
+                    <!-- End of Blog Post 1 -->
+                    
+  
+                  </div>
+
+                  {% comment %} <a class="btn btn-primary" href="#">See All Posts</a> {% endcomment %}
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- /Footer -->
+      <footer class="site-footer clearfix">
+        <div class="footer-social">
+          <ul class="footer-social-links">
+            <li>
+              <a href="#" target="_blank">Twitter</a>
+            </li>
+            <li>
+              <a href="#" target="_blank">Facebook</a>
+            </li>
+            <li>
+              <a href="#" target="_blank">Instagram</a>
+            </li>
+          </ul>
+        </div>
+    
+        <div class="footer-copyrights">
+          <p>© 2021 All rights reserved.</p>
+        </div>
+      </footer>
+      <!-- /Footer -->
+    </div>
+    <!-- /Page Content -->
+  </div>
+</div>
+    
+
+
+{% endblock  %}
