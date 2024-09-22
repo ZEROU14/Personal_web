@@ -1,11 +1,11 @@
 from django.db import models
 from django.shortcuts import reverse
-
+from ckeditor.fields import RichTextField
 # Create your models here.
 
 class Blogs(models.Model):
     title = models.CharField(max_length=100)
-    description = models.TextField()
+    description = RichTextField()
     active = models.BooleanField(default=True)
     datetime_created = models.DateTimeField(auto_now_add=True)
     datetime_modified = models.DateTimeField(auto_now=True)

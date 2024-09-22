@@ -1,0 +1,24 @@
+<div class="r-sidebar">
+    <div class="sidebar-button">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  
+  <div id="blog-sidebar" class="blog-sidebar">
+    <div class="blog-sidebar-content clearfix">
+      <div class="sidebar-item">
+        <div class="sidebar-title">
+          <h4>Recent Blogs</h4>
+        </div>
+        <ul>
+          {% for blog in blogs %}
+          <li>
+            <a href="{{blog.get_absolute_url}}">{{blog.title}}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>

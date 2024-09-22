@@ -9,7 +9,7 @@ class BlogsView(generic.ListView):
     queryset = Blogs.objects.filter(active=True).order_by('-datetime_created')
     context_object_name = 'blogs'
     template_name = 'blogs/blogs_list.html'
-
+    
 
 class BlogDetailView(generic.DetailView):
     model = Blogs

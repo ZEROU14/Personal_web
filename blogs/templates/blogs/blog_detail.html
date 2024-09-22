@@ -4,6 +4,7 @@
 
 
 {% block content %}
+{% include 'leftbar.html' %}
 <div class="content-area single-page-area" data-animation="animated-section-rotateRoomBottomIn">
     <div class="single-page-content">
       <div class="content-wrapper">
@@ -25,8 +26,8 @@
               <div class="entry-content">
 
                 <div class="row">
-                  <div class=" col-xs-12 col-sm-12 ">
-                    <p>{{blogs.description}}</p>
+                  <div class=" col-xs-12 col-sm-12 preserve-whitespace">
+                    <p>{{blogs.description|safe}}</p>
                       <p></p>
                       
                       <p></p>
@@ -34,9 +35,9 @@
                   </div>
                 </div>
 
-              </div><!-- .entry-content -->
-
-              <div class="entry-meta entry-meta-bottom">
+              <!-- .entry-content -->
+              </div>
+                <div class="entry-meta entry-meta-bottom">
                 <div class="date-author">
                   
                   <span class="entry-date">
@@ -50,7 +51,7 @@
                   <span class="author vcard">
                     <a class="url fn n" href="#" rel="author">
                       <i class="fas fa-user"></i>
-                      <span> Leven</span>
+                      <span> the Dude</span>
                     </a>
                   </span>
                 </div>
