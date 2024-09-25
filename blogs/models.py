@@ -1,6 +1,7 @@
 from django.db import models
 from django.shortcuts import reverse
 from ckeditor.fields import RichTextField
+# from ckeditor.fields import CKEditorField
 # Create your models here.
 
 class Blogs(models.Model):

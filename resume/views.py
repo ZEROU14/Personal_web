@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from .models import Experience , Certificates, Knowledge,Design ,Coding
+from .models import Experience , Certificates, Knowledge,Design ,Coding , Education
 
 # Create your views here.
 def resume_view(request):
@@ -9,8 +9,12 @@ def resume_view(request):
     Knowledges = Knowledge.objects.all()
     Designs = Design.objects.all()
     Codings = Coding.objects.all()
+    Educations = Education.objects.get(pk=1)
+
     return render(request,'resume/resume.html',{'experiences':Experiences,
                                                 'certificatess':Certificatess,
                                                 'knowledges':Knowledges,
                                                 'designs':Designs,
-                                                'codings':Codings}) 
+                                                'codings':Codings,
+                                                'educations':Educations,
+                                                }) 

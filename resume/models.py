@@ -1,5 +1,5 @@
 from django.db import models
-
+from ckeditor.fields import RichTextField
 # Create your models here.
 class Experience(models.Model):
     company = models.CharField(max_length=100,blank=True)
@@ -43,3 +43,6 @@ class Coding(models.Model):
 
     def __str__(self):
         return self.title
+    
+class Education(models.Model):
+    title = RichTextField()

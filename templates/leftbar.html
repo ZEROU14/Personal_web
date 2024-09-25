@@ -13,9 +13,9 @@
           <h4>Recent Blogs</h4>
         </div>
         <ul>
-          {% for blog in blogs %}
+          {% for foo in blog %}
           <li>
-            <a href="{{blog.get_absolute_url}}">{{blog.title}}</a>
+            <a href="{{ foo.get_absolute_url}}">{{foo.title}}</a>
           </li>
           {% endfor %}
         </ul>
